@@ -10,7 +10,7 @@ void min_to_hour(void){
 }
 void hour_to_min(void){
     t.min=t.hour * 60.0f;
-    printf("%.2f", t.min);
+    printf("%.2f Minutes", t.min);
 }
 
 int main(void){
