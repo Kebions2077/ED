@@ -1,24 +1,27 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <time.h>
-int main(void){
-    int x,y,numbers,*p=NULL;
-    printf("=========================\n");
-    printf("Enter Array size:\n");
-    scanf("%i",&numbers);
-    p= malloc(numbers * sizeof(int));
-    for(x=0;x<numbers;x++){
-        p[x]=rand() % 100;
+#include<stdio.h>
+#include<stdlib.h>
+
+int main (void){
+    int numeros,x,y,*ponteiro;
+    ponteiro=NULL;
+    printf("------------------------------------------\n");
+    printf("Digite o Numero de itens do vetor:\n");
+    scanf("%i",&numeros);
+    printf("------------------------------------------\n");
+    system("cls");
+    ponteiro= malloc(numeros*sizeof(int));
+    printf("---Preenchimento De Vetor---\n");
+    for(x=0;x<numeros;x++){
+        printf("Local[%i]:\n",x);
+        scanf("%i",&ponteiro[x]);
     }
     system("cls");
-    printf("------------Array--------------\n");
-    for(y=0;y<numbers;y++){
-        printf("[%i],",p[y]);
+    printf("-----------------------------------------\n");
+    printf("-----------Numeros Armazenados-----------\n ");
+    for(y=0;y<numeros;y++){
+        printf("[%i],",ponteiro[y]);
     }
-        
-    printf("-------------------------------");
-    free(p);
+    printf("\n------------------------------------------\n");
+    free(ponteiro);
     return 0;
-
-
 }
