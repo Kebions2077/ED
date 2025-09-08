@@ -1,9 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include <time.h>
 
 int main (void){
     int numeros,x,y,*ponteiro;
     ponteiro=NULL;
+    srand (time(NULL));
     printf("------------------------------------------\n");
     printf("Digite o Numero de itens do vetor:\n");
     scanf("%i",&numeros);
@@ -12,8 +14,7 @@ int main (void){
     ponteiro= malloc(numeros*sizeof(int));
     printf("---Preenchimento De Vetor---\n");
     for(x=0;x<numeros;x++){
-        printf("Local[%i]:\n",x);
-        scanf("%i",&ponteiro[x]);
+        ponteiro[x]=rand()%100;
     }
     system("cls");
     printf("-----------------------------------------\n");
