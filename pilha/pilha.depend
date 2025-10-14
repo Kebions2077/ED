@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1760190613 source:c:\users\kevin\onedrive\햞ea de trabalho\ed-4\pilha string\pilha\p_main.c
+	<stdio.h>
+	<string.h>
+	"pilha.h"
+	<stdlib.h>
+
+1760189167 c:\users\kevin\onedrive\햞ea de trabalho\ed-4\pilha string\pilha\pilha.h
+
+1760190643 source:c:\users\kevin\onedrive\햞ea de trabalho\ed-4\pilha string\pilha\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pilha.h"
+
+1760190613 source:c:\users\kevin\onedrive\햞ea de trabalho\ed-4\pilha\p_main.c
+	<stdio.h>
+	<string.h>
+	"pilha.h"
+	<stdlib.h>
+
+1760412031 c:\users\kevin\onedrive\햞ea de trabalho\ed-4\pilha\pilha.h
+
+1760412032 source:c:\users\kevin\onedrive\햞ea de trabalho\ed-4\pilha\pilha.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"pilha.h"
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1760411739 source:c:\users\kevin\onedrive\Área de trabalho\ed-4\lista encadeada\fila\f_main.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+
+1760410618 c:\users\kevin\onedrive\Área de trabalho\ed-4\lista encadeada\fila\fila.h
+
+1760411825 source:c:\users\kevin\onedrive\Área de trabalho\ed-4\lista encadeada\fila\fila.c
+	<stdio.h>
+	<stdlib.h>
+	"fila.h"
+
