@@ -24,8 +24,7 @@ int pop(void){
     else {
         int value=stack[top];
         printf("Removido:[%i]\n",stack[top]);
-        top --;
-        return stack[top];
+        return stack[top--];
 
     }
 }
