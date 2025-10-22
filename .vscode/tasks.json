@@ -1,31 +1,28 @@
 {
     "version": "2.0.0",
     "tasks": [
-        {
-            "type": "shell",
-            "label": "build C",
-            "command": "C:\\gcc\\bin\\gcc.exe",
-            "args": [
-                "-g",
-                "-std=c17",
-                "-Wall",
-                "-Wextra",
-                "-pedantic",
-                "${file}",
-                "-o",
-                "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            },
-            "detail": "Compilador GCC para debug"
+        { "type": "shell",
+    "label": "build C",
+    "command": "${workspaceFolder}\\validate_and_debug.bat",
+    "args": [
+        "${file}",
+        "${workspaceFolder}\\${fileBasenameNoExtension}.exe"
+    ],
+    "options": {
+        "cwd": "${workspaceFolder}"
+    },
+    "problemMatcher": ["$gcc"],
+    "group": {
+        "kind": "build",
+        "isDefault": false
+    },
+    "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "echo": true
+    },
+    "detail": "Compilador GCC com validação"
         },
         {
             "type": "shell",
