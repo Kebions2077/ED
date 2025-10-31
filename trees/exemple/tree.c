@@ -39,21 +39,18 @@ void show (node *root){
     printf("\n------------------------------\n");
 }
 void crescent(node *root){
-    printf("----------Crescent Tree------------\n");
+    printf("-----Crescent Tree-----\n");
     if(root!=NULL){
         crescent(root->left);
         printf("[%i]",root->info);
-         crescent(root->right);
-}
-    printf("--------------------------------------\n");
-}
-    void decrescent( node *root){
-printf("\n----------------Decrescent Tree---------------------\n");
-
-    decrescent( root->right);
-    printf("[%i]",root->info);
-    decrescent( root ->left);
+        crescent(root->right);
     }
-printf("-------------------------------------------------------\n");
 }
-
+void decrescent(node *root){
+    printf("---Decrescent Tree---\n");
+    if(root!=NULL){
+        decrescent(root->right);
+        printf("[%i]",root->info);
+        decrescent(root->left);
+    }
+}

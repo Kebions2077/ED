@@ -20,7 +20,20 @@ op=x=0;
       scanf("%i",&x);
       ins(root,x);
       break;
-      case 2:
-        crescent(root)
+      case 3:
+        show(root);
+        break;
+      case 4:
+        crescent(root);
+        break;
+      case 5: 
+        decrescent(root);
+        break;
+      case 6:
+        exit(1);
+    }
+
       
+}
+return 0;
 }

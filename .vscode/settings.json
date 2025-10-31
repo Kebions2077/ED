@@ -1,2 +1,15 @@
 {
+    "C_Cpp.copilotHover": "disabled",
+    "github.copilot.chat.agent.currentEditorContext.enabled": false,
+    "github.copilot.advanced": {},
+    "github.copilot.chat.agent.autoFix": false,
+    "terminal.integrated.suggest.quickSuggestions": {
+
+        "commands": "off",
+        "arguments": "off",
+        "unknown": "off"
+    },
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.experimental.showOnSuggestConflict": "always",
+    "editor.inlineSuggest.suppressSuggestions": true
 }
