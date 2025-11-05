@@ -1,56 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tree.h"
 
-typedef struct node{
-    struct node *left;
-    int info;
-    struct node *right;
-} node;
+typedef struct No {
+    int valor;
+    struct No *esq, *dir;
+} No;
 
-
-
-node* ins(node *root, int x){
-    if(root == NULL){
-        node *aux= malloc (sizeof(node));
-        aux->left=NULL;
-        aux->info=x;
-        aux->right=NULL;
-        return aux;
+// Função que adiciona um número na árvore
+No* inserir(No* raiz, int valor) {
+    if (raiz == NULL) {
+        // Cria o nó diretamente aqui
+        No* novo = (No*)malloc(sizeof(No));
+        novo->valor = valor;
+        novo->esq = novo->dir = NULL;
+        return novo;
     }
-    if(x<root->info){
-        root->left= ins(root->left,x);
 
-    }
-    else{
-        root->right=ins(root->right,x);
+    if (valor < raiz->valor)
+        raiz->esq = inserir(raiz->esq, valor);
+    else if (valor > raiz->valor)
+        raiz->dir = inserir(raiz->dir, valor);
+    else
+        printf("Valor %d ja existe!\n", valor);
 
-    }
-    return root;
+    return raiz;
 }
 
-void show (node *root){
-    printf("----------TREE--------------\n");
-    if(root!=NULL){
-        printf("[%i]", root->info);
-        show(root->left);
-        show(root->right);
-    }
-    printf("\n------------------------------\n");
+// Busca um número
+No* buscar(No* raiz, int valor) {
+    if (raiz == NULL || raiz->valor == valor)
+        return raiz;
+
+    if (valor < raiz->valor)
+        return buscar(raiz->esq, valor);
+    else
+        return buscar(raiz->dir, valor);
 }
-void crescent(node *root){
-    printf("-----Crescent Tree-----\n");
-    if(root!=NULL){
-        crescent(root->left);
-        printf("[%i]",root->info);
-        crescent(root->right);
+
+// Remove apenas se tiver 0 ou 1 filho
+No* remover(No* raiz, int valor) {
+    if (raiz == NULL) return NULL;
+
+    if (valor < raiz->valor) {
+        raiz->esq = remover(raiz->esq, valor);
+    } else if (valor > raiz->valor) {
+        raiz->dir = remover(raiz->dir, valor);
+    } else {
+        // Encontrou o nó
+        if (raiz->esq && raiz->dir) {
+            printf("Nao pode remover %d (tem dois filhos)\n", valor);
+            return raiz;
+        }
+
+        No* temp = raiz->esq ? raiz->esq : raiz->dir;
+        free(raiz);
+        return temp;
+    }
+
+    return raiz;
+}
+
+// Mostra em ordem crescente
+void mostrar(No* raiz) {
+    if (raiz != NULL) {
+        mostrar(raiz->esq);
+        printf("%d ", raiz->valor);
+        mostrar(raiz->dir);
     }
 }
-void decrescent(node *root){
-    printf("---Decrescent Tree---\n");
-    if(root!=NULL){
-        decrescent(root->right);
-        printf("[%i]",root->info);
-        decrescent(root->left);
-    }
-}
+
