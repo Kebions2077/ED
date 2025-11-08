@@ -1,6 +1,6 @@
--Caminhamentos 
+-Caminhamentos (o normal e o em ordem crescente)
 -inserir
--retirar
+-retirar(somente se tiver nenhum ou no maximo um filho)
 -localizar(dizer nivel que está e quantas buscar fez)
 -vizualização padrao 
 -ordem crescente 
